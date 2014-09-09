@@ -1,6 +1,8 @@
+# Fourier Local Corellation Tracking (FLCT)
+
 April 10, 2009 - George H. Fisher and Brian T. Welsch, SSL, UC Berkeley
 
-DESCRIPTION OF THE FLCT CODE FUNCTION
+## DESCRIPTION OF THE FLCT CODE FUNCTION
 
 The flct code is designed to estimate a 2-d velocity field from two
 images, under the assumption that the 2nd image differs from the first one
@@ -12,7 +14,7 @@ viewable from non-unix (eg MS Windows) systems.  The /doc folder also
 includes a copy of the Fisher and Welsch 2008 PASP paper describing the flct 
 code as it existed in the Spring of 2007 (version test_13).
 
-LICENSE
+## LICENSE
 
 The flct source code is open-source, under the GPL version 2 license.  You
 are free to copy the code and use it as you like (in accordance with GPL v.2), 
@@ -22,7 +24,7 @@ Welsch et al (ApJ 610, 1148) (2004), and any future papers which describe
 updated versions of flct.  If you incorporate flct source code into any 
 other programs, the GPL v. 2 licensing agreement provisions will apply.
 
-VERSION
+## VERSION
 
 This current version of flct is 1.01-1.  The C-source code for flct is
 unchanged from version 1.01.  The only significant change from 1.01 is
@@ -50,7 +52,7 @@ The shift_frac2d.pro function included in the IDL-io-procedures folder
 uses real_pt instead of real_part so that it can be used without 
 licensing issues in GDL.  
 
-MAIN CHANGES FROM VERSION test_13 (version described in Fisher & Welsch 2008)
+## MAIN CHANGES FROM VERSION test_13 (version described in Fisher & Welsch 2008)
 
 When sub-images are extracted from the two images used for correlation tracking,
 a local mean subtraction is now done before the sub-images are muliplied by the
@@ -88,7 +90,7 @@ non-integer shifts.  An obvious application of shift_frac2d is the removal
 of secular shifts, such as those due to solar rotation between two images 
 on the Sun taken at different times.
 
-INSTALLATION
+## INSTALLATION
 
 The flct code is written in C, although it is designed to be used in
 conjunction with IDL for performing the binary I/O that flct uses to read
@@ -164,7 +166,7 @@ be accomplished by copying flct.exe to C:\WINDOWS\SYSTEM32 .  A better
 solution is to modify your PATH variable in windows to include the location
 where you have copied the file.
 
-TESTING
+## TESTING
 
 The tests/ subdirectory of the flct distribution contains 3 files, 
 hashgauss.dat, deltaxygauss.dat, and testgaussvel.dat .  hashgauss.dat
@@ -257,3 +259,4 @@ arrays.  The IDL procedure shift_frac2d, located in the IDL-io-procedures
 folder, was used to generate f2 from f1 and deltax, deltay via this command:
 
 f2=shift_frac2d(f1,deltax,deltay,/progress)
+
